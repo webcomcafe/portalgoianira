@@ -1,0 +1,39 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Nome
+        placeholder: 'Nome da categoria'
+        span: left
+
+    slug:
+        label: Apelido
+        span: right
+        preset: name
+
+    toolbar:
+        type: partial
+        path: toolbar_control
+
+secondaryTabs:
+    stretch: true
+    fields:
+        description:
+            tab: Descrição
+            type: richeditor
+            toolbarButtons: bold|italic|html
+            stretch: true
+
+        published:
+            label: Publicado
+            type: switch
+            tab: Detalhes
+            comment: 'Publicar os posts dessa categoria'
+
+        parent:
+            label: Pai
+            type: relation
+            tab: Detalhes
+            emptyOption: '- - - -'

@@ -1,0 +1,53 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: '#'
+        searchable: true
+
+    title:
+        label: Título
+        searchable: true
+        type: tooltip
+        limit: 30
+
+    comments:
+        label: Comentários
+        relation: comments
+        useRelationCount: true
+        align: center
+
+    categories:
+        label: Categorias
+        relation: categories
+        select: name
+        sortable: false
+
+    authors:
+        label: Autores
+        relation: authors
+        select: first_name
+        sortable: false
+
+    published:
+        label: Publicado
+        type: switch
+
+    layout:
+        label: Formato
+        type: selectable
+        earchable: true
+
+    created_at:
+        label: Criaçãdo
+        type: timesince
+
+#    edit:
+#        label: ''
+#        searchable: false
+#        sortable: false
+#        type: route
+#        path: webcomcafe/blog/posts/update/:id
+#        align: right

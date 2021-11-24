@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Comment
+
+# Model Form Field configuration
+form: $/webcomcafe/blog/models/comment/fields.yaml
+
+# Model Class name
+modelClass: Webcomcafe\Blog\Models\Comment
+
+# Default redirect location
+defaultRedirect: webcomcafe/blog/comments
+
+# Create page
+create:
+    title: Create Comment
+    redirect: webcomcafe/blog/comments/update/:id
+    redirectClose: webcomcafe/blog/comments
+
+# Update page
+update:
+    title: Edit Comment
+    redirect: webcomcafe/blog/comments
+    redirectClose: webcomcafe/blog/comments
+
+# Preview page
+preview:
+    title: Preview Comment

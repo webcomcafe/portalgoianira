@@ -1,0 +1,40 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+
+    name:
+        label: Nome
+        searchable: true
+
+    posts_count:
+        label: Posts
+        relation: posts_count
+        useRelationCount: true
+        searchable: true
+        align: center
+
+    parent_id:
+        label: Pai
+        relation: parent
+        select: name
+
+    published:
+        label: Publicada
+        type: switch
+
+    created_at:
+        label: Criação
+        type: timetense
+
+#    action:
+#        label: ''
+#        type: route
+#        path: webcomcafe/blog/categories/update/:id
+#        sortable: false
+#        align: right
+

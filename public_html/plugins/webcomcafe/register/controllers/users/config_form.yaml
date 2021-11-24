@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: User
+
+# Model Form Field configuration
+form: $/webcomcafe/register/models/user/fields.yaml
+
+# Model Class name
+modelClass: Webcomcafe\Register\Models\User
+
+# Default redirect location
+defaultRedirect: webcomcafe/register/users
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: webcomcafe/register/users/update/:id
+    redirectClose: webcomcafe/register/users
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: webcomcafe/register/users
+    redirectClose: webcomcafe/register/users
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

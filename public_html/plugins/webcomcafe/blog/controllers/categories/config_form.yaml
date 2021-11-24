@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Categorias
+
+# Model Form Field configuration
+form: $/webcomcafe/blog/models/category/fields.yaml
+
+# Model Class name
+modelClass: Webcomcafe\Blog\Models\Category
+
+# Default redirect location
+defaultRedirect: webcomcafe/blog/categories
+
+# Create page
+create:
+    title: Criar Categoria
+    redirect: webcomcafe/blog/categories/update/:id
+    redirectClose: webcomcafe/blog/categories
+
+# Update page
+update:
+    title: Editar Categoria
+    redirect: webcomcafe/blog/categories
+    redirectClose: webcomcafe/blog/categories
+
+# Preview page
+preview:
+    title: Preview Category

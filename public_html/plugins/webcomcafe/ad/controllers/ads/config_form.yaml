@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Ad
+
+# Model Form Field configuration
+form: $/webcomcafe/ad/models/ad/fields.yaml
+
+# Model Class name
+modelClass: Webcomcafe\Ad\Models\Ad
+
+# Default redirect location
+defaultRedirect: webcomcafe/ad/ads
+
+# Create page
+create:
+    title: Create Ad
+    redirect: webcomcafe/ad/ads/update/:id
+    redirectClose: webcomcafe/ad/ads
+
+# Update page
+update:
+    title: Edit Ad
+    redirect: webcomcafe/ad/ads
+    redirectClose: webcomcafe/ad/ads
+
+# Preview page
+preview:
+    title: Preview Ad

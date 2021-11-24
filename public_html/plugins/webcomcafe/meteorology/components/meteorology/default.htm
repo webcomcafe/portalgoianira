@@ -1,0 +1,16 @@
+<div>
+    <span class="date">
+        <i class="bi bi-calendar"></i>
+        {{__SELF__.weather.when|date_tense }}
+    </span>
+</div>
+<div>
+    <span class="temp-min mr-1">
+        Min {{ __SELF__.weather.min }}<sup>C</sup>
+        <i class="bi bi-cloud-drizzle"></i>
+    </span>
+    <span class="temp-max">
+        Max {{ __SELF__.weather.max }}<sup>C</sup>
+        <i class="bi bi-cloud"></i>
+    </span>
+</div>

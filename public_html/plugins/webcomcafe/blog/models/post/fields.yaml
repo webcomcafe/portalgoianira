@@ -1,0 +1,102 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Título
+        placeholder: 'Título do post'
+        span: left
+
+    slug:
+        label: Apelido
+        span: right
+        preset: title
+
+    toolbar:
+        type: partial
+        path: form_toolbar
+
+secondaryTabs:
+    stretch: true
+    fields:
+        content:
+            stretch: true
+            type: richeditor
+            mode: split
+            tab: Escrever
+
+        subscriber:
+            label: Exclusivo
+            type: switch
+            commentAbove: 'Somente para assinantes'
+            tab: Detalhes
+
+        excerpt:
+            label: Resumo
+            type: textarea
+            cssClass: autosize
+            size: tiny
+            comment: 'Resumo do post. Será exibido abaixo do título'
+            tab: Detalhes
+
+        layout:
+            label: Formato
+            type: dropdown
+            showSearch: false
+            span: left
+            comment: 'Tipo de publicação'
+            tab: Detalhes
+
+        tags:
+            label: Tags
+            type: taglist
+            span: right
+            comment: 'Palavras chaves para o post'
+            tab: Detalhes
+
+        categories:
+            label: Categorias
+            type: relation
+            span: left
+            comment: 'A qual categorias pertence esse post'
+            tab: Detalhes
+
+        authors:
+            label: Autores
+            type: relation
+            select: concat(first_name, ' ', last_name)
+            span: right
+            comment: 'Autores da publicação'
+            tab: Detalhes
+
+        published:
+            label: Publicado
+            type: switch
+            span: left
+            comment: 'Visível no site'
+            tab: Publicação
+
+        published_at:
+            label: 'Data de publicação'
+            type: datepicker
+            mode: datetime
+            comment: 'Data e horário para publicação'
+            span: left
+            tab: Publicação
+
+        finished_at:
+            label: 'Data de Encerramento'
+            type: datepicker
+            mode: datetime
+            comment: 'Data e horário para remover publicação'
+            span: left
+            tab: Publicação
+
+        images:
+            label: Imagens
+            type: fileupload
+            mode: image
+            imageWidth: 200
+            imageHeight: 200
+            tab: Imagens

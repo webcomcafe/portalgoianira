@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Advertiser
+
+# Model Form Field configuration
+form: $/webcomcafe/ad/models/advertiser/fields.yaml
+
+# Model Class name
+modelClass: Webcomcafe\Ad\Models\Advertiser
+
+# Default redirect location
+defaultRedirect: webcomcafe/ad/advertisers
+
+# Create page
+create:
+    title: Create Advertiser
+    redirect: webcomcafe/ad/advertisers/update/:id
+    redirectClose: webcomcafe/ad/advertisers
+
+# Update page
+update:
+    title: Edit Advertiser
+    redirect: webcomcafe/ad/advertisers
+    redirectClose: webcomcafe/ad/advertisers
+
+# Preview page
+preview:
+    title: Preview Advertiser

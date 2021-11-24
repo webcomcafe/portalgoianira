@@ -1,0 +1,4 @@
+1.0.1: Plugin Meteorology
+1.0.2:
+    - Criando entidade Weather
+    - create_weather_table.php

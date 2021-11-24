@@ -1,0 +1,21 @@
+<?php if (!$this->fatalError): ?>
+
+    <div class="layout fancy-layout">
+
+        <?= Form::open([
+            'class' => 'layout',
+            'data-change-monitor' => 'true',
+        ]) ?>
+
+        <?= $this->formRender() ?>
+
+        <?= Form::close() ?>
+
+    </div>
+
+<?php else: ?>
+
+    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+    <p><a href="<?= Backend::url('webcomcafe/blog/categories') ?>" class="btn btn-default">Return to categories list</a></p>
+
+<?php endif ?>

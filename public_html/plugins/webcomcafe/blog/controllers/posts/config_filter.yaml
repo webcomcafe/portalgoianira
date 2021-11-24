@@ -1,0 +1,23 @@
+# Propiedades de filtros
+
+scopes:
+    format:
+        label: Formato
+        type: group
+        modelClass: Webcomcafe\Blog\Models\Post
+        options: getLayoutOptions
+        scope: format
+
+    category:
+        label: Categoria
+        modelClass: Webcomcafe\Blog\Models\Category
+        nameFrom: name
+        scope: filterCategories
+
+    status:
+        label: Publicado
+        type: switch
+        default: 2
+        conditions:
+            - published = false
+            - published <> false

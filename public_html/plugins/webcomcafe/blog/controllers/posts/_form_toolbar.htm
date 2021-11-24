@@ -1,0 +1,34 @@
+<?php
+    $create = $this->formGetContext() == 'create';
+?>
+<div class="form-buttons loading-indicator-container">
+    <?php if (!$create): ?>
+    <button
+        type="button"
+        class="btn btn-default empty oc-icon-trash-o pull-right"
+        data-request="onDelete"
+        data-request-confirm="Remover esta publicação ?"
+        data-control="delete-button"> REMOVER</button>
+    <?php endif ?>
+    <a class="btn btn-default oc-icon-times-rectangle pull-right" href="<?= Backend::url('webcomcafe/blog/posts') ?>">FECHAR</a>
+
+    <button
+        type="submit"
+        data-request="onSave"
+        data-hotkey="ctrl+s, cmd+s"
+        data-load-indicator="Salvando..."
+        class="btn btn-primary oc-icon-save"
+        <?php if (!$create): ?> data-request-data="redirect:0" <?php endif; ?>
+    >
+        SALVAR
+    </button>
+    <button
+        type="button"
+        data-request="onSave"
+        data-request-data="close:1"
+        data-hotkey="ctrl+enter, cmd+enter"
+        data-load-indicator="Salvando..."
+        class="btn btn-default oc-icon-save">
+        SALVAR E FECHAR
+    </button>
+</div>

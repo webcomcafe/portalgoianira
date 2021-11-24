@@ -1,0 +1,9 @@
+1.0.1: Primeira versão Blog de Notícias
+1.0.2:
+    - Criando entidades de categorias e posts
+    - create_categories_table.php
+    - create_posts_table.php
+    - create_comments_table.php
+1.0.3:
+    - Criando campos nested
+    - create_category_nested_fields.php
